@@ -1,0 +1,37 @@
+// opgave3b_s211933.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+    int i, ran;
+    int counter = 1;
+
+    //random number generator intialiseres og deklareres
+    srand((int)time(0));
+    ran = rand() % 100;
+
+    puts("Indtast gaet");
+    scanf_s("%d", &i);
+
+    while (i != ran) {
+
+        counter += 1;
+
+        if (i < ran) {
+
+            puts("Dit gaet er for lavt, skriv et nyt gaet");
+            scanf_s("%d", &i);
+        }
+        else if (i > ran) {
+
+            puts("Dit gaet er for hoejt, skriv et nyt gaet");
+            scanf_s("%d", &i);
+        }
+    }
+
+    printf_s("\n Tillykke, du gaettede rigtigt efter %d forsoeg\n", counter);
+}
