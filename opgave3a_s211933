@@ -1,0 +1,25 @@
+// opgave3a_s211933.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// Lav et program der indlæser et heltal n og beregner summen af alle tal fra 1 til og med n ved hjælp af en for-løkke.
+
+#include <stdio.h>
+
+int main()
+{
+    int n = 0, sum = 0;
+    int i;
+
+    //Opgaven løses ved at udregne summen af 1 op til n ved hjælp af et for loop
+
+    puts("Indtast heltal\n");
+    scanf_s("%d", &n);
+
+    for (i = 1; i <= n; i++) {
+
+        sum += i;
+        printf_s("\nsum = %d\n", sum);
+    }
+
+    printf_s("\nsummen af 1 op til %d er lig med %d\n",n,sum);
+}
+
+
